@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es6",
+        "forceConsistentCasingInFileNames": true,
+        "experimentalDecorators": true,
+        "noImplicitAny": false,
+        "sourceMap": true,
+        "outDir": "typescript-bin",
+        "skipLibCheck": true,
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitReturns": true,
+        "strictNullChecks": true,
+        "strictPropertyInitialization": true,
+        "baseUrl": "./",
+        "noImplicitThis": true
+    },
+    "exclude": ["node_modules"]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "esbuild-bug-repro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "esbuild --outdir=esbuild-bin --platform=node --sourcemap=external --format=cjs run.ts src/*/*.ts",
+    "start": "node --enable-source-maps esbuild-bin/run.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "esbuild": "^0.14.3",
+    "typescript": "^4.5.4"
+  }
+}
