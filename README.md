@@ -1,6 +1,12 @@
-# esbuild-bug-repro
+# esbuild-export-bug
 
 There seems to be a bug in esbuild (or I'm just a dunce when it comes to JS) that causes imports/exports to break depending on the order of the exports. This repo reproduces the issue.
+
+| Package    | Version |
+|------------|---------|
+| esbuild    | 0.14.3  |
+| typescript | 4.5.4   |
+| node       | 16.13.1 |
 
 ## Reproduction steps
 
