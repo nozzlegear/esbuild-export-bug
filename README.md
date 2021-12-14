@@ -75,7 +75,7 @@ TypeError: (0 , import__.say) is not a function
 
 The bug seems to exist in the order of exports from `src/index.ts`. I've found several workarounds:
 
-**1.** Reorder the exports in `src/index.ts` to have `./say` exported before `./app`:
+**Workaround 1:** Reorder the exports in `src/index.ts` to have `./say` exported before `./app`:
 
 ```
 // In index.ts
@@ -84,7 +84,7 @@ export * from "./say";
 export * from "./app";
 ```
 
-**2.** Export the `say` function explicitly:
+**Workaround 2:** Export the `say` function explicitly:
 
 ```
 // In index.ts
@@ -93,7 +93,7 @@ export * from "./app";
 export { say } from "./say";
 ```
 
-**3.** Import the `say` function from its own file instead of from `index.ts`
+**Workaround 3:** Import the `say` function from its own file instead of from `index.ts`
 
 ```
 // In app.ts
@@ -104,7 +104,7 @@ export function startApp() {
 }
 ```
 
-**4.** Don't use esbuild, just compile the code with typescript instead:
+**Workaround 4:** Don't use esbuild, just compile the code with typescript instead:
 
 ```sh
 npx tsc && node typescript-bin/run.js
